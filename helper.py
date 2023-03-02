@@ -16,6 +16,7 @@ def show_countplot(data,variable,colour):
     plt.title(f"{variable} distribution for {colour} wine")
     plt.xlabel(f"{variable} of wine")
     plt.ylabel("Count")
+    plt.xticks(rotation=90)
     plt.show()
     plt.close()
 
