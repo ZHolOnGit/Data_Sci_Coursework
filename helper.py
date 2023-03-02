@@ -10,6 +10,16 @@ from collections import Counter
 from sklearn.metrics import roc_curve, auc, roc_auc_score
 from matplotlib.colors import ListedColormap
 
+def show_countplot(data,variable,colour):
+    plt.figure(figsize = (10,6))
+    sns.countplot(x = variable, data = data)
+    plt.title(f"{variable} distribution for {colour} wine")
+    plt.xlabel(f"{variable} of wine")
+    plt.ylabel("Count")
+    plt.show()
+    plt.close()
+
+
 
 def show_scatterplot(data, labels, title, xlabel = 'x values', ylabel = 'y values', figsize = (10, 6)):
     """
